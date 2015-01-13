@@ -1,21 +1,14 @@
-# docker-ssh-vpn-jump-host
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-A secured ssh based VPN in a Docker container. Works only as 
-jump host for port forwarding and SOCKS proxy but provides no shell.
+THIS IS A SSH GATEWAY / JUMP HOST. NO SHELL IS AVAILABLE.
 
-Idea: SSH VPN jump host for port forwarding
-===========================================
-
-This docker file provides a pure jump host. This means it
+This ssh server is a pure jump host. This means it
 can only be used to connect to other servers using
 ssh port fowarding. It has no shell available and 
 cannot run any commands.
 
-Connecting
-==========
-
 Connect from Linux
-------------------
+==================
 
 Open the command line and run
 
@@ -39,7 +32,7 @@ Open the command line and run
 
 
 Connect from Mac OS X
----------------------
+=====================
 
 Install a current ssh version using [homebrew][1]:
 
@@ -54,7 +47,7 @@ Then continue with the steps for Linux.
 [1]: http://brew.sh/
 
 Connect from Windows
---------------------
+====================
 
 *Attention:* PuTTY does not support the required encryption 
 levels used on this server.
@@ -64,13 +57,15 @@ Connect using [KiTTY SSH][2] or [MobaXTerm][3].
 [2]: http://www.9bis.net/kitty/
 [3]: http://mobaxterm.mobatek.net/
 
-### KiTTY SSH
-
+KiTTY SSH
+---------
 Configure a new session with port forwarding. Under "SSH"
 choose "Don't start a shell or command at all".
 
-### MobaXTerm
+MobaXTerm
+---------
 
 Create a new connection. Under "Advanced settings" choose 
 "Conncet through SSH gateway (jump host)"
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
