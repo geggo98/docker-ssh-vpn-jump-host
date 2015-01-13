@@ -22,6 +22,7 @@ Open the command line and run
 1. `ssh -N -L xxx:nnnnnn:yyy -p 22022 vpn@name-of-server`
 
    Where 
+   
 | Option         | Description                          |
 | -------------- | -------------------------------------|
 | nnnnnn:yyy     | The remote server you want to access |
