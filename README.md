@@ -22,11 +22,11 @@ Open the command line and run
 1. `ssh -N -L xxx:nnnnnn:yyy -p 22022 vpn@name-of-server`
 
    Where 
-      | Option         | Description                          |
-      | -------------- | -------------------------------------|
-      | nnnnnn:yyy     | The remote server you want to access |
-      | xxx            | The local port number                |
-      | name-of-server | The name of the jump gateway server  |
+| Option         | Description                          |
+| -------------- | -------------------------------------|
+| nnnnnn:yyy     | The remote server you want to access |
+| xxx            | The local port number                |
+| name-of-server | The name of the jump gateway server  |
 
    You can then access the remote server on port xxx on your 
    local system.
