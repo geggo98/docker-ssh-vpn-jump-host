@@ -1,0 +1,7 @@
+sshvpn:
+  image: geggo98/ssh-vpn-jump-host
+  ports:
+   - "22022:22022"
+  volumes:
+   - "/home/containers/x11vpn/authorized_keys:/ssh"
+  net: "host"

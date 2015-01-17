@@ -3,6 +3,14 @@
 A secured ssh based VPN in a Docker container. Works only as 
 jump host for port forwarding and SOCKS proxy but provides no shell.
 
+It can either be used to access services on a remote host or
+a remote access in a secure way.
+
+Or it can be used to publish services inside a docker container
+with ssh. I this case, there should be at least two docker
+ontainers: One running the service you want to access from the
+outside and one running the ssh service. 
+
 Idea: SSH VPN jump host for port forwarding
 ===========================================
 
