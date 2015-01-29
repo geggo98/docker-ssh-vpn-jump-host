@@ -5,3 +5,4 @@ sshvpn:
   volumes:
    - "/home/containers/sshvpn/authorized_keys:/ssh"
   net: "host"
+# For debugging use: fig run sshvpn /usr/sbin/sshd -d
