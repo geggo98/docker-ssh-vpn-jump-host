@@ -24,7 +24,7 @@ RUN cp /ssh.template/banner.template /ssh.template/banner
 # Space delimited list of VPN users. Usually only one user is needed
 ENV VPNUSERS vpn
 
-RUN for i in $VPNUSERS; do adduser --gecos "" --shell /bin/false --disabled-login --disabled-password --no-create-home  $i; done 
+RUN for i in $VPNUSERS; do adduser --gecos "" --shell /bin/false --disabled-password --no-create-home  $i; done 
 COPY authorized_keys /ssh.template/authorized_keys.template
 RUN chmod a=r /ssh.template/authorized_keys.template
 RUN for i in $VPNUSERS; do cp -v -p /ssh.template/authorized_keys.template /ssh.template/authorized_keys_${i}; done

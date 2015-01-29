@@ -74,7 +74,7 @@ GatewayPorts yes
 #PermitOpen [IPv6_addr]:port
 PermitOpen any 
 
-#PermitTunnel yes
+PermitTunnel yes
 
 MaxStartups 10:30:60
 Banner /ssh/banner
@@ -82,7 +82,7 @@ Banner /ssh/banner
 # Allow client to pass locale environment variables
 AcceptEnv LANG LC_*
 
-Subsystem sftp /usr/lib/openssh/sftp-server
+#Subsystem sftp /usr/lib/openssh/sftp-server
 
 # Set this to 'yes' to enable PAM authentication, account processing,
 # and session processing. If this is enabled, PAM authentication will
@@ -93,7 +93,7 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 # If you just want the PAM account and session checks to run without
 # PAM authentication, then enable this but set PasswordAuthentication
 # and ChallengeResponseAuthentication to 'no'.
-UsePAM yes
+UsePAM no
 
 # Hardening the encryption according to
 # https://stribika.github.io/2015/01/04/secure-secure-shell.html

@@ -57,11 +57,11 @@ echo "Storing host keys in volume"
 cp -v -u -p /etc/ssh/ssh_host_*key* /ssh/
 
 echo Fixing permissions
-chown -R root:root /etc/ssh
+chown -R root:root /etc/ssh /ssh
 chmod -R a=rX /etc/ssh/
 chmod go= /etc/ssh/ssh_host_*key*
 
-chmod a-w /ssh
+chmod a=rX,u+w /ssh /ssh/authorized_keys*
 
 ls -ld /etc/ssh /etc/ssh/ssh_host_*_key* /ssh /ssh/authorized_keys*
 
