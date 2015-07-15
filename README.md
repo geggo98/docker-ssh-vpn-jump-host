@@ -97,6 +97,7 @@ Create a new connection. Under "Advanced settings" choose
 
 ### Autossh
 
-Instead of the plain command line ssh, you can also use [autossh][4]. Autossh automatically restarts the tunnel when the connection temporarily goes down. It is available to all major platforms (on Windows it is available as a Cygwin package).
+Instead of the plain command line ssh, you can also use [autossh][4]. Autossh automatically restarts the tunnel when the connection temporarily goes down. It is available to all major platforms (on Windows autossh is available as a Cygwin package and can even [run as a Windows service][5]).
 
 [4]: http://www.harding.motd.ca/autossh/
+[5]: http://www.matthanger.net/2008/04/creating-persistent-ssh-tunnels-in.html
