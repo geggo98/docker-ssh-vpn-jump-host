@@ -11,6 +11,18 @@ with ssh. I this case, there should be at least two docker
 ontainers: One running the service you want to access from the
 outside and one running the ssh service. 
 
+The big advantage of having ssh in a separate Docker container is that 
+the ssh container can be kept at the most current version while the rest
+of the system can stay at a stable state. So if there are some security
+updates, it is sufficient to only update the ssh Docker container and
+keep the rest of the system untouched.
+
+With the ssh Docker container it is also possible to update ssh from remote 
+without risking to lock yourself out. Just spawn two instances of the ssh
+Docker container, then connect to the first and update the second and 
+then vice versa. So there is always a backup in case the update fails and
+ssh won't start in the updated container.
+
 Idea: SSH VPN jump host for port forwarding
 ===========================================
 
@@ -83,3 +95,8 @@ choose "Don't start a shell or command at all".
 Create a new connection. Under "Advanced settings" choose 
 "Conncet through SSH gateway (jump host)"
 
+### Autossh
+
+Instead of the plain command line ssh, you can also use [autossh][4]. Autossh automatically restarts the tunnel when the connection temporarily goes down. It is available to all major platforms (on Windows it is available as a Cygwin package).
+
+[4]: http://www.harding.motd.ca/autossh/
