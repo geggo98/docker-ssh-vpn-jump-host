@@ -101,3 +101,13 @@ Instead of the plain command line ssh, you can also use [autossh][4]. Autossh au
 
 [4]: http://www.harding.motd.ca/autossh/
 [5]: http://www.matthanger.net/2008/04/creating-persistent-ssh-tunnels-in.html
+
+# News
+
+| Date       | Remark|
+|------------|-------|
+| 2015-07-22 | The provided configuration is already imune against the [MaxAuthRetries attack][6]. |
+
+[6]: https://kingcope.wordpress.com/2015/07/16/openssh-keyboard-interactive-authentication-brute-force-vulnerability-maxauthtries-bypass/
+
+
