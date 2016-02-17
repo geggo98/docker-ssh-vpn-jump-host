@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Stefan Schwetschke <stefan@schwetschke.de>
 
-ENV SSH_BASE_VERSION 2015-01-29
+ENV SSH_BASE_VERSION 2016-02-17
 
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
@@ -50,4 +50,8 @@ EXPOSE 22022
 VOLUME /ssh
 
 ENTRYPOINT ["/bin/bash", "/run-ssh.sh"]
-CMD ["/usr/sbin/sshd", "-De"]
+# Disable remote DNS lookups in sshd:
+# 1. Add the parameter "-u0" (don't fill hostnames in the utmp user structure).
+# 2. Add "UseDNS no" to the sshd_config file.
+# Still there might be lookups when authorized_keys contains "from=..." clauses.
+CMD ["/usr/sbin/sshd", "-De", "-u0"]
