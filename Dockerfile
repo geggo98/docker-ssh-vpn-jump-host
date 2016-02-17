@@ -6,7 +6,7 @@ ENV SSH_BASE_VERSION 2016-02-17
 RUN apt-get update && apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
 
-ENV SSH_CONFIGURATION 2015-01-07
+ENV SSH_CONFIGURATION 2016-02-17
 
 RUN mkdir /ssh
 RUN mkdir /ssh.template
@@ -38,7 +38,7 @@ ENV SKIP_SERVER_PRIME_NUMBERS 0
 ENV STORE_SERVER_KEYS_IN_CONTAINER 0
 
 # Update of the binaries stored in the image
-ENV SSH_UPDATE 2015-01-07
+ENV SSH_UPDATE 2016-02-17
 
 RUN apt-get update
 RUN apt-get upgrade -y openssh-server
