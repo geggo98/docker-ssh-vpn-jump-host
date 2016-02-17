@@ -107,7 +107,9 @@ Instead of the plain command line ssh, you can also use [autossh][4]. Autossh au
 | Date       | Remark|
 |------------|-------|
 | 2015-07-22 | The provided configuration is already imune against the [MaxAuthRetries attack][6]. |
+| 2016-02-17 | The provided configuration is probably safe against the [GLibc getaddrinfo attack][7]. Nevertheless all users are advised to rebuild the Docker image, so it fetches the fixes from Ubunutu 14.04 LTS. The patches are already in the LTS version, othere Ubuntu versions should follow soon.|
 
 [6]: https://kingcope.wordpress.com/2015/07/16/openssh-keyboard-interactive-authentication-brute-force-vulnerability-maxauthtries-bypass/
+[7]: https://googleonlinesecurity.blogspot.de/2016/02/cve-2015-7547-glibc-getaddrinfo-stack.html
 
 
