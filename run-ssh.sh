@@ -8,7 +8,7 @@ apt-get clean
 
 echo "Copying the templates"
 cp -v -p /ssh.template/*.template /ssh/
-cp -v -p -u /ssh.template/* /ssh/
+cp -v -p -u --no-clobber /ssh.template/* /ssh/
 
 
 echo "Checking for stored prime numbers in volume"
